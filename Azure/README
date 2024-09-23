@@ -1,1 +1,9 @@
-Files needed for deployment of Streamlit app onto Azure machine
+Files needed for deployment of Streamlit app onto Azure machine:
+
+File Structure:
+  --> Home.py
+  --> requirements.txt
+  --> pages folder
+     --> Remaining PY files
+
+CMD: streamlit run Home.py --server.port 5011
