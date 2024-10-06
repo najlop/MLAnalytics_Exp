@@ -7,7 +7,7 @@ from pypdf import PdfReader
 # from streamlit.type_util import Key
 # from streamlit_chromadb_connection.chromadb_connection import ChromadbConnection
 
-logo = '/content/MLA.png'
+logo = 'MLA.png'
 img = Image.open(logo)
 
 st.set_page_config(
