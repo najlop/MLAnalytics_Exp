@@ -7,26 +7,19 @@ from pypdf import PdfReader
 # from streamlit.type_util import Key
 # from streamlit_chromadb_connection.chromadb_connection import ChromadbConnection
 
-logo = 'MLA.png'
+logo = 'logo.png'
 img = Image.open(logo)
 
 st.set_page_config(
     page_title='ArielGPT Home',
-    page_icon=img
+    # page_icon=img,
+    layout='centered'
 )
 
 client = Anthropic(
     api_key=''
 )
 MODEL_NAME = 'claude-3-5-sonnet-20240620'
-
-hide_menu_style = """
-<style>
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-</style>
-"""
-st.markdown(hide_menu_style, unsafe_allow_html=True)
 
 st.sidebar.markdown("<h3 style='text-align: center; color: black;'>ArielGPT Q&A</h3>", unsafe_allow_html=True)
 st.sidebar.write("""
@@ -42,11 +35,12 @@ st.sidebar.markdown("<h3 style='text-align: center; color: black;'>ArielGPT Know
 st.sidebar.write("""
 - Check out our knowledge base of research papers for the ESA Ariel mission.
 """)
-st.sidebar.write("---")
-st.sidebar.markdown("<div style='text-align: center; color: blue;'>Copyrights © MLAnalytics 2024</div>", unsafe_allow_html=True)
+st.sidebar.markdown("<div style='text-align: center; color: blue;'>Copyright © MLAnalytics 2024</div>", unsafe_allow_html=True)
 st.sidebar.markdown("<div style='text-align: center; color: blue;'>Powered By mark.hayden@students.opit.com</div>", unsafe_allow_html=True) 
 
-st.markdown("<h2 style='text-align: center; color: gray;'>ArielGPT</h2>", unsafe_allow_html=True)
+# st.markdown("<h2 style='text-align: center; color: gray;'>ArielGPT</h2>", unsafe_allow_html=True)
+st.image(img)
+
 
 Q_A, summary, papers, about_us  = st.tabs(['Q&A','Summarise','Knowledge Base','About Us'])
 
