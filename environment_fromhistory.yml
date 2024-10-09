@@ -1,0 +1,30 @@
+name: arielgpt
+channels:
+  - conda-forge
+  - defaults
+  - pytorch
+dependencies:
+# - python=3.8     # First released: 2019-10; Maintenance status: security
+  - python=3.11    # First released: 2022-10; Maintenance status: security
+# - python=3.12    # First released: 2023-10; Maintenance status: bugfix
+  - numpy
+  - scipy
+  - pandas
+# Jupyter notebooks
+  - jupyter
+  # - jupyter_contrib_nbextensions
+  # - jupyter_nbextensions_configurator
+  - jupyterlab
+  # - nbdime
+  # - rise           # Jupyter/IPython Slideshow Extension
+  - streamlit
+  - explainerdashboard
+#
+  - PyPDF2
+  - transformers
+  - SentencePiece
+  - PyMuPDF
+  - pytorch
+  - torchvision
+  - anthropic
+#
